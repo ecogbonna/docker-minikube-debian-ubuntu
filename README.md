@@ -1,23 +1,41 @@
-## docker-minikube-vagrant-shell/debian/ubuntu
+# Prerequisites
 
-Steps:
-1. Install chocolatey windows package manager
+## VM Hardware Requirements
 
-	Link: [chocolatey](https://docs.chocolatey.org/en-us/choco/setup)
+- 8 GB of RAM (Preferably 16 GB)
+- 50 GB Disk space
+
+## Chocolatey
+
+Download and Install Chocolatey Windows package manager [chocolatey](https://docs.chocolatey.org/en-us/choco/setup)
 
 
-2. Install Vagrant
+## Vagrant
+
+Vagrant provides an easier way to deploy multiple virtual machines on VirtualBox more consistently.
+
+Install Vagrant using Chocolatey:
 
 ```shell
 choco install vagrant
-```	
-	
-3. Install a provider: virtualbox
+```
+
+## VirtualBox
+Virtualbox will be used as a provider: 
 
 ```shell
 choco install virtualbox
 choco list
 ```
 
-4. Vagrant IaaC workflow: 
-    > Scope (Infra,folders) => vagrant init => vagrant up => vagrant ssh => vagrant halt => vagrant reload => vagrant destroy
+
+## Vagrant IaaC workflow: 
+   1. Scope (Infra, folders)
+   2. vagrant init
+   3. vagrant up 
+   4. vagrant ssh
+   4. vagrant halt 
+   5. vagrant reload 
+   6. vagrant destroy
+
+Read more from [vagrant documentation.](https://developer.hashicorp.com/vagrant/docs)
